@@ -1,0 +1,9 @@
+.fillers {
+    width: 50%;
+    max-width: 350px;
+    margin-left: 5%;
+    text-align: center;
+    border-radius: 8px;   
+    padding: 16px; 
+    background-color: #fff; 
+  }

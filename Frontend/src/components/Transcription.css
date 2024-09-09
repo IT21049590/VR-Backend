@@ -1,0 +1,22 @@
+.transcription-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    background-color: #f9f9f9;
+    
+    border-radius: 8px;
+  }
+  
+  .transcription-title {
+    font-size: 20px; 
+    margin-bottom: 16px; 
+    color: #333; 
+  }
+  
+  .transcription-text {
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #555; 
+  }
+  

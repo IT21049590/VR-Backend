@@ -1,0 +1,53 @@
+.repeated-sentences-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    
+    margin-left: 150px;
+    max-width: 800px;
+  }
+  
+  .repeated-sentences-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .repeated-sentences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .repeated-sentence-item {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sentence-block {
+    margin-bottom: 10px;
+  }
+  
+  .sentence-label {
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .sentence-text {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  .similarity-score {
+    font-weight: bold;
+    color: #4caf50;
+    text-align: right;
+  }
+  

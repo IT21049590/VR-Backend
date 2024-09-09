@@ -1,0 +1,42 @@
+/* src/components/RehearsalReport.css */
+.rehearsal-report {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .report-header h2 {
+    margin: 0;
+  }
+  
+  .rehearse-again {
+    background-color: #f04e23;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .report-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .left-column, .right-column {
+    width: 48%;
+  }
+  
+  .summary, .pace, .fillers, .sensitive-phrases, .originality, .pitch {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
