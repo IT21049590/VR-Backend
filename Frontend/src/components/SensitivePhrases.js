@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SensitivePhrases = ({ userData }) => {
   const { silences } = userData;
@@ -6,7 +6,11 @@ const SensitivePhrases = ({ userData }) => {
   return (
     <div className="sensitive-phrases">
       <h3>Silence Phrases</h3>
-      <p>{silences.message}</p>
+      {silences && silences.message ? (
+        <p>{silences.message}</p>
+      ) : (
+        <p>No silences detected</p>
+      )}
     </div>
   );
 };

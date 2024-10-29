@@ -3,7 +3,7 @@ import { RadialBarChart, RadialBar, ResponsiveContainer, PolarAngleAxis } from '
 import './Pace.css'; 
 
 const Pace = ({ userData }) => {
-  const { wpm } = userData;
+  const { wpm = 0 } = userData;
 
   const maxWPM = 200;
 
