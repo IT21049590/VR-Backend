@@ -5,7 +5,7 @@
 // import SensitivePhrases from './components/SensitivePhrases';
 // import Transcription from './components/Transcription';
 // import SimilarWordsChart from './components/SimilarWordsChart';
-// import RepeatedSentences from './components/RepeatedSentences'; 
+// import RepeatedSentences from './components/RepeatedSentences';
 // import GrammarIssues from './components/GrammarIssues'; // Import the component
 // import './App.css';
 
@@ -27,9 +27,9 @@
 //         <div className="upper-section">
 //         <Summary userData={userData} />
 //         </div>
-          
+
 //           <div className="middle-section">
-          
+
 //             <Pace userData={userData} />
 //             <div className="section">
 //             <SensitivePhrases userData={userData} />
@@ -56,53 +56,64 @@
 
 // export default App;
 
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import ClipLoader from 'react-spinners/ClipLoader';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
+import "./App.css";
 
 const App = () => {
   const [userObjects, setUserObjects] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-   
     setTimeout(() => {
-      fetch('http://localhost:3000/users/hiruna@gmail.com')
+      fetch("http://35.223.130.187:4000/users/hiruna@gmail.com")
         .then((response) => response.json())
         .then((data) => {
           setUserObjects(data);
-          setLoading(false); 
+          setLoading(false);
         })
         .catch((error) => {
           console.log(error);
-          setLoading(false); 
+          setLoading(false);
         });
-    }, 1000); 
+    }, 1000);
   }, []);
 
   const handleCardClick = (user) => {
-    navigate('/user-details', { state: { user } });
+    navigate("/user-details", { state: { user } });
   };
 
   return (
     <div className="app-container">
-      {loading ? ( 
+      {loading ? (
         <div className="loading-container">
           <ClipLoader color="#36d7b7" size={150} />
         </div>
       ) : (
         <div className="card-container">
           {userObjects.map((user, index) => (
-            <div key={index} className="user-card" onClick={() => handleCardClick(user)}>
+            <div
+              key={index}
+              className="user-card"
+              onClick={() => handleCardClick(user)}
+            >
               <div className="user-email">
                 <p>Attempt {index + 1}</p>
               </div>
               <div className="card-content">
-                <p><strong>Date:</strong> {user.Date}</p>
-                <p><strong>Total time spent:</strong> {Math.floor(user.wpm.duration_seconds / 60)}:{Math.floor(user.wpm.duration_seconds % 60)}</p>
-                <p><strong>Slides rehearsed:</strong> 12</p>
+                <p>
+                  <strong>Date:</strong> {user.Date}
+                </p>
+                <p>
+                  <strong>Total time spent:</strong>{" "}
+                  {Math.floor(user.wpm.duration_seconds / 60)}:
+                  {Math.floor(user.wpm.duration_seconds % 60)}
+                </p>
+                <p>
+                  <strong>Slides rehearsed:</strong> 12
+                </p>
               </div>
             </div>
           ))}
@@ -113,6 +124,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
